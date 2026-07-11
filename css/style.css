@@ -1,0 +1,246 @@
+/* ==========================
+   Global
+========================== */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+
+    opacity:.03;
+
+    background-image:
+        url("images/noise.png");
+}
+
+body{
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(17,50,77,.06),
+            transparent 45%
+        ),
+        #f8fafc;
+}
+
+/* ==========================
+   Navbar
+========================== */
+.navbar{
+    background:rgba(17,24,39,.72);
+    backdrop-filter:blur(18px);
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.navbar{
+    transition:all .3s ease;
+}
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.lab-text{
+    color:#fff;
+    font-weight:600;
+    font-size:2rem;
+    letter-spacing:3px;
+}
+
+.lab-text{
+    align-self:center;
+}
+
+.nav-link{
+    color:#fff !important;
+    opacity:.85;
+    margin-left:18px;
+	letter-spacing: 1.5px;
+}
+
+.nav-link:hover{
+    opacity:1;
+}
+
+.navbar-logo{
+    height:100px;
+    width:auto;
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+    overflow:hidden;
+    padding-bottom: 30px;
+}
+
+/* Full-width banner */
+
+.hero-banner{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-top:72px;      /* fixed navbar */
+    margin-bottom:60px;
+}
+
+/* Hero text */
+
+.hero-content{
+    text-align:center;
+}
+
+.hero h1{
+
+    font-family:"Kanit",sans-serif;
+
+    font-size:clamp(2.4rem,5vw,4rem);
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.hero h2{
+
+    font-size:clamp(1.2rem,2.6vw,1.9rem);
+
+    font-weight:300;
+
+    color:#475569;
+
+    max-width:850px;
+
+    margin:0 auto 25px;
+
+    line-height:1.6;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    color: #64748b;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btn-lab{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:14px 36px;
+
+    background:#fff;
+
+    color:#111827;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.btn-lab:hover{
+
+    background:#e5e7eb;
+
+    color:#111827;
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width:768px){
+
+.hero h1{
+    font-size:2.3rem;
+    line-height:1.15;
+}
+
+.hero h2{
+    font-size:1.25rem;
+}
+
+.hero p{
+    font-size:1rem;
+    padding:0 20px;
+
+}
+
+.btn-lab{
+    padding:12px 30px;
+}
+}
+
+/* ==========================
+H1 Section
+========================== */
+
+
+.hero-tags{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:45px;
+}
+
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    background:rgba(17,50,77,.08);
+    border:1px solid rgba(17,50,77,.12);
+    border-radius:50px;
+    color:#11324d;
+    text-decoration:none;
+    font-weight:600;
+    transition:all .25s ease;
+}
+
+.hero-tag:hover{
+    background:#11324d;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+
+.footer{
+    padding:60px 20px 40px;
+    text-align:center;
+    color:#64748b;
+}
+
+.footer p{
+    margin-bottom:8px;
+}
+
+.footer-note{
+    font-size:.85rem;
+    color:#94a3b8;
+}

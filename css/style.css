@@ -244,3 +244,136 @@ H1 Section
     font-size:.85rem;
     color:#94a3b8;
 }
+
+/* ==========================
+Projects Section
+========================== */
+
+
+
+.projects-header{
+    padding:150px 0 80px;
+    text-align:center;
+}
+
+.projects-header h1{
+    font-family:"Kanit",sans-serif;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.projects-header p{
+    max-width:700px;
+    margin:auto;
+    color:#9ca3af;
+    line-height:1.8;
+}
+
+.projects-section{
+    padding-bottom:100px;
+}
+
+.project-card{
+    background:#ffffff;
+    border-radius:24px;
+    padding:30px;
+    height:100%;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-image{
+    width:100%;
+    border-radius:16px;
+    margin-bottom:25px;
+}
+
+.project-tag{
+    display:inline-block;
+    font-size:.85rem;
+    color:#64748b;
+    margin-bottom:15px;
+}
+
+.project-card h3{
+    font-family:"Kanit",sans-serif;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#6b7280;
+    line-height:1.7;
+}
+
+.project-links{
+    margin-top:30px;
+}
+
+.project-links a{
+    margin-right:20px;
+    text-decoration:none;
+    font-weight:600;
+    color:#11324D;
+}
+
+.coming-soon{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+/* ==========================
+Marketing Campaign Section
+========================== */
+.project-banner{
+    position: relative;
+    padding:180px 0 100px;
+    overflow:hidden;
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11324D 0%,
+            #111827 100%
+        );
+}
+
+.project-banner-image{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.60;   /* adjust 0.15–0.30 */
+}
+
+.project-banner-overlay{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(17,50,77,.35),
+            rgba(17,24,39,.45)
+        );
+}
+
+.project-banner-content{
+    position:relative;
+    z-index:1;
+}
+
+.project-banner h1{
+    font-size:clamp(2.5rem, 5vw, 4rem);
+    margin-bottom:20px;
+}
+
+.project-banner p{
+    max-width:700px;
+    color:#d1d5db;
+}
+

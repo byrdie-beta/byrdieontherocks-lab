@@ -377,3 +377,57 @@ Marketing Campaign Section
     color:#d1d5db;
 }
 
+/* ==========================
+   About Page
+========================== */
+
+.about-page{
+    padding-top:140px;
+}
+
+.about-section{
+    padding:80px 0;
+}
+
+.about-photo{
+    width:100%;
+    border-radius:24px;
+}
+
+.about-section h1{
+    font-family:"Kanit",sans-serif;
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:25px;
+}
+
+.about-section p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+.about-details{
+    padding:80px 0;
+    background:rgba(17,50,77,.04);
+}
+
+.about-details h2{
+    font-family:"Kanit",sans-serif;
+    margin-bottom:40px;
+}
+
+.about-item{
+    height:100%;
+    padding:30px;
+    background:#fff;
+    border-radius:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.about-item h3{
+    font-family:"Kanit",sans-serif;
+}
+
+.about-item p{
+    color:#64748b;
+    line-height:1.7;
+}

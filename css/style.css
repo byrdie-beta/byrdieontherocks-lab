@@ -435,4 +435,29 @@ Marketing Campaign Section
 .about-item p{
     color:#64748b;
     line-height:1.7;
+
+}
+/* ==========================
+   Global Back to Projects Element
+========================== */
+
+.back-link {
+    display: inline-block;
+    margin: 2rem 0;
+    color: #11324D;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   Global Project Line Height
+========================== */
+
+.case-study-content p,
+.case-study-content li {
+    line-height: 1.6;
 }

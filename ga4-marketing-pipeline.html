@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Meta Tags -->
     <title>GA4 Marketing Analytics Pipeline | ByrdieOnTheRocks Lab</title>
-    <meta name="description" content="A GA4 marketing analytics project using Python and the Google Analytics Data API to analyze traffic sources, audiences, and landing pages.">
+    <meta name="description"
+        content="A GA4 marketing analytics project using Python and the Google Analytics Data API to analyze traffic sources, audiences, and landing pages.">
     <meta name="author" content="Ekkaphot">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta name="theme-color" content="#11324D">
@@ -17,7 +18,8 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="ByrdieOnTheRocks Lab">
     <meta property="og:title" content="GA4 Marketing Analytics Pipeline | ByrdieOnTheRocks Lab">
-    <meta property="og:description" content="A GA4 marketing analytics project using Python and the Google Analytics Data API to analyze traffic sources, audiences, and landing pages.">
+    <meta property="og:description"
+        content="A GA4 marketing analytics project using Python and the Google Analytics Data API to analyze traffic sources, audiences, and landing pages.">
     <meta property="og:url" content="https://lab.byrdieontherocks.com/ga4-marketing-pipeline">
     <meta property="og:image" content="https://lab.byrdieontherocks.com/images/ga4-marketing-analytics-thumbnail.jpg">
     <meta property="og:image:width" content="1200">
@@ -25,8 +27,8 @@
     <meta property="og:image:alt" content="GA4 Marketing Analytics Pipeline project preview">
 
 
-<!-- Schema -->
-<script type="application/ld+json">
+    <!-- Schema -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
@@ -56,13 +58,30 @@
         data-blockingmode="auto" type="text/javascript"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
 
-        gtag('config', 'G-X47QE9KNNJ');
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
     </script>
 </head>
 

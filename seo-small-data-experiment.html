@@ -56,13 +56,30 @@
         data-blockingmode="auto" type="text/javascript"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
 
-        gtag('config', 'G-X47QE9KNNJ');
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
     </script>
 </head>
 

@@ -56,15 +56,32 @@
     <!-- Cookiebot -->
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="79c76370-762c-47c8-bdd4-b3051e5a86fb"
         data-blockingmode="auto" type="text/javascript"></script>
-    
-     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-X47QE9KNNJ');
+    <!-- Google tag (gtag.js) -->
+    <script>
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
+
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
     </script>
 
 </head>
@@ -149,8 +166,8 @@
                     <a href="projects#data-projects" class="hero-tag">
                         Data &amp; Insights
                     </a>
-                    <a href="projects#marketing-experiments" class="hero-tag">
-                        Marketing Experiments
+                    <a href="projects#automation-projects" class="hero-tag">
+                        Automation Projects
                     </a>
                     <a href="https://www.byrdieontherocks.com/?utm_source=lab.byrdieontherocks.com&utm_medium=referral&utm_campaign=home_page&utm_content=inline_link"
                         class="hero-tag">

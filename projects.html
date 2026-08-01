@@ -57,13 +57,30 @@
         data-blockingmode="auto" type="text/javascript"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
 
-        gtag('config', 'G-X47QE9KNNJ');
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
     </script>
 </head>
 
@@ -110,9 +127,9 @@
                 <h1>Projects & Experiments</h1>
 
                 <p>
-                    A collection of analytics projects and marketing experiments
-                    exploring how data, technology, and testing can improve
-                    marketing decisions.
+                    A collection of analytics projects, automation tools,
+                    and marketing experiments exploring how data, technology, and testing can improve marketing
+                    decisions.
                 </p>
 
                 <!-- shortcuts  -->
@@ -121,8 +138,8 @@
                         Data Projects
                     </a>
 
-                    <a href="#marketing-experiments" class="hero-tag">
-                        Marketing Experiments
+                    <a href="#automation-projects" class="hero-tag">
+                        Automation Projects
                     </a>
                 </div>
             </div>
@@ -233,50 +250,51 @@
 
 
         <!--TO BE DEVELOPED Marketing Experiments -->
-        <section id="marketing-experiments" class="projects-section d-none">
+        <section id="marketing-experiments" class="projects-section">
+
             <div class="container">
 
                 <div class="section-heading">
-                    <h2>Marketing Experiments</h2>
+                    <h2>Automation Projects</h2>
 
                     <p>
-                        Small tests designed to explore marketing ideas,
-                        channels, automation, and customer experiences.
+                        Projects and experiments built to improve marketing workflows through Python, data, and testing.
                     </p>
                 </div>
 
                 <div class="row g-4">
 
-                    <!-- Experimen 1 -->
+                    <!-- Project 1 -->
                     <div class="col-md-6 col-lg-4">
                         <article class="project-card">
 
-                            <img src="images/email-experiment.jpg" class="project-image"
-                                alt="Email marketing experiment preview">
+                            <img src="images/seo-broken-link.jpg" class="project-image"
+                                alt="Preview of the SEO Broken Link Checker Python automation project" loading="lazy"
+                                decoding="async">
 
                             <span class="project-tag">
-                                Marketing Experiment
+                                Marketing Automation
                             </span>
 
-                            <h3>Email Subject Line Test</h3>
+                            <h3>SEO Broken Link Checker</h3>
 
                             <p>
-                                Testing whether different subject-line approaches
-                                affect email open rates.
+                                A Python automation tool that validates internal links and generates a CSV report to
+                                improve SEO hygiene before publishing.
                             </p>
 
                             <div class="project-links">
-                                <a href="projects/experiments/email-subject-test">
-                                    View experiment
+                                <a href="seo-broken-link-checker" aria-label="View the SEO Broken Link Checker project">
+                                    View project
                                 </a>
                             </div>
 
                         </article>
                     </div>
-
-
-                    <!-- Experiment 2 -->
-                    <div class="col-md-6 col-lg-4">
+                    
+                    <!-- Hidden Project Placeholder -->
+                    <!--  Projectß 2 -->
+                    <div class="col-md-6 col-lg-4 d-none">
                         <article class="project-card">
 
                             <img src="" class="project-image" alt="Marketing automation experiment preview">

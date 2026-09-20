@@ -1,1 +1,13 @@
+# Local system files
 .DS_Store
+
+# Local credentials and tokens
+.env
+.env.*
+!.env.example
+google-ads.yaml
+credentials/
+token.json
+client_secret*.json
+*service-account*.json
+*.pem

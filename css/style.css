@@ -528,3 +528,55 @@ Marketing Campaign Section
         height: auto;
     }
 }
+
+/* ==========================
+ GA4 Website Traffic Monitor - Workflow Image 
+========================== */
+
+.ga4-workflow-card {
+    background: transparent;
+    height: auto;
+    overflow: hidden;
+}
+
+.ga4-workflow-card .ga4-workflow-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* GA4 Monitoring Results */
+
+.ga4-monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.ga4-monitor-grid .ga4-monitor-card {
+    background: transparent;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.ga4-monitor-grid .ga4-monitor-image {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .ga4-monitor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ga4-monitor-grid .ga4-monitor-image {
+        height: 240px;
+    }
+}

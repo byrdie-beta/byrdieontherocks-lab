@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta Tags -->
+    <title>Google Ads Marketing Pipeline | ByrdieOnTheRocks Lab</title>
+    <meta name="description"
+        content="An automated Google Ads reporting pipeline using the Google Ads API, Python, Google Sheets, and Looker Studio for campaign performance monitoring.">
+    <meta name="author" content="Ekkaphot">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#11324D">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://lab.byrdieontherocks.com/google-ads-marketing-pipeline">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ByrdieOnTheRocks Lab">
+    <meta property="og:title" content="Google Ads Marketing Pipeline | ByrdieOnTheRocks Lab">
+    <meta property="og:description"
+        content="An automated Google Ads reporting pipeline using the Google Ads API, Python, Google Sheets, and Looker Studio for campaign performance monitoring.">
+    <meta property="og:url" content="https://lab.byrdieontherocks.com/google-ads-marketing-pipeline">
+    <meta property="og:image" content="https://live.staticflickr.com/65535/55538895833_212f5b51f0.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Google Ads Marketing Pipeline project preview">
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Google Ads Marketing Pipeline",
+        "description": "A marketing analytics pipeline using the Google Ads API, Python, Google Sheets, and Looker Studio to automate campaign reporting and performance analysis.",
+        "url": "https://lab.byrdieontherocks.com/google-ads-marketing-pipeline",
+        "author": {
+            "@type": "Person",
+            "name": "Ekkaphot"
+        }
+    }
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Cookiebot -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="79c76370-762c-47c8-bdd4-b3051e5a86fb"
+        data-blockingmode="auto" type="text/javascript">
+        </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
+
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index">
+                <img src="images/byrdieontherockslablogo.png" alt="Byrdie On The Rocks Lab" class="navbar-logo">
+
+                <span class="lab-text">| LAB</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbar" class="collapse navbar-collapse">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab-notes">Lab Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-me">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- PROJECT BANNER -->
+    <section class="project-banner">
+
+        <div class="project-banner-overlay"></div>
+        <div class="container project-banner-content">
+            <p class="case-study-label">
+                Marketing Analytics & Automation
+            </p>
+            <h1>GA4 Website Traffic Monitor</h1>
+            <p>
+                Building an automated website traffic monitoring system using
+                the GA4 Data API, Python, and Pandas to track performance changes
+                and send email alerts through the Gmail API.
+            </p>
+        </div>
+    </section>
+    <main>
+
+        <!-- Project Header -->
+        <header class="case-study-header">
+            <div class="container">
+
+                <a href="projects" class="back-link">
+                    ← Back to Projects
+                </a>
+
+                <p class="case-study-label">
+                    Marketing Analytics & Automation
+                </p>
+
+                <h2>GA4 Website Traffic Monitor</h2>
+
+                <p class="case-study-intro">
+                    Automated Website Traffic Monitoring and Email Alerts Using Python
+                </p>
+
+                <div class="tool-list">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>GA4 Data API</span>
+                    <span>Gmail API</span>
+                    <span>OAuth 2.0</span>
+                    <span>macOS launchd</span>
+                </div>
+
+                <div class="case-study-buttons">
+                    <a href="https://github.com/byrdie-beta/ga4-website-traffic-monitor" class="btn-case"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="View the GA4 Website Traffic Monitor project on GitHub">
+                        View on GitHub
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- Overview -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Project Overview</h2>
+
+                <p>
+                    This project builds an automated website traffic monitoring
+                    system using Google Analytics 4 (GA4), Python, and the Gmail API.
+                </p>
+
+                <p>
+                    Instead of manually checking website performance in GA4,
+                    I developed a Python workflow that retrieves daily traffic data,
+                    compares recent performance against the previous period,
+                    and identifies declines in key website metrics.
+                </p>
+
+                <p>
+                    When a traffic decline is detected, the system automatically
+                    sends an email notification. The workflow runs locally on
+                    macOS using launchd, allowing website performance to be
+                    monitored without manually executing Python scripts.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Goals -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>What I Wanted to Build</h2>
+
+                <ul>
+                    <li>
+                        Automate website traffic monitoring using the GA4 Data API.
+                    </li>
+
+                    <li>
+                        Retrieve daily website performance without manually
+                        exporting reports.
+                    </li>
+
+                    <li>
+                        Compare the most recent seven days against the
+                        previous seven-day period.
+                    </li>
+
+                    <li>
+                        Monitor Active Users, Sessions, New Users,
+                        and Engagement Rate.
+                    </li>
+
+                    <li>
+                        Automatically send email notifications when
+                        traffic performance declines.
+                    </li>
+
+                    <li>
+                        Schedule the entire workflow to run automatically
+                        on a local Mac.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- Workflow -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Workflow</h2>
+
+                <p>
+                    The project connects data collection, performance analysis,
+                    monitoring rules, and email notifications into one
+                    automated workflow:
+                </p>
+
+                <p>
+                    <strong>
+                        GA4 Data API → Python & Pandas → Performance Comparison
+                        → Monitoring Rules → Gmail API
+                    </strong>
+                </p>
+
+                <p>
+                    Python retrieves daily website performance data from GA4.
+                    Pandas processes the data and calculates changes between
+                    the current and previous seven-day periods.
+                </p>
+
+                <p>
+                    The monitoring results are saved to a local CSV report.
+                    If any monitored metric declines, the system generates
+                    an alert and sends an email through the Gmail API.
+                </p>
+
+                <p>
+                    The workflow is scheduled using macOS launchd,
+                    which automatically executes the Python scripts
+                    at the configured time.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Workflow Diagram -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <div class="screenshot-card ga4-workflow-card">
+                    <img src="images/ga4-monitor-workflow.jpg" class="ga4-workflow-image"
+                        alt="GA4 website traffic monitoring workflow showing Python data processing, seven-day performance comparison, traffic decline detection, and automated Gmail alerts"
+                        loading="lazy" decoding="async" width="2048" height="768">
+
+                    <div class="screenshot-caption">
+                        <p>
+                            Automated workflow connecting GA4 data collection,
+                            performance comparison, monitoring rules,
+                            and conditional email alerts.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Approach -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>Approach</h2>
+
+                <ol>
+                    <li>
+                        Connected Python to Google Analytics 4 using
+                        the GA4 Data API.
+                    </li>
+
+                    <li>
+                        Retrieved daily Active Users, Sessions,
+                        New Users, and Engagement Rate.
+                    </li>
+
+                    <li>
+                        Used Pandas to organize daily performance data
+                        and define two consecutive seven-day periods.
+                    </li>
+
+                    <li>
+                        Calculated changes between the previous
+                        and current monitoring periods.
+                    </li>
+
+                    <li>
+                        Created monitoring rules that identify declines
+                        when current performance is lower than
+                        the previous period.
+                    </li>
+
+                    <li>
+                        Generated a CSV monitoring report containing
+                        the latest comparison results.
+                    </li>
+
+                    <li>
+                        Integrated the Gmail API to send email alerts
+                        when monitoring rules are triggered.
+                    </li>
+
+                    <li>
+                        Implemented OAuth authentication with saved
+                        authorization tokens and token-refresh logic.
+                    </li>
+
+                    <li>
+                        Configured macOS launchd to execute the
+                        workflow automatically each day.
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+
+        <!-- Key Results -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Key Results</h2>
+
+                <div class="insight-card">
+
+                    <h3>Automated Website Traffic Monitoring</h3>
+
+                    <p>
+                        Built a reusable Python workflow that retrieves
+                        GA4 website performance data and compares
+                        consecutive seven-day monitoring periods.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <h3>Traffic Decline Detection</h3>
+
+                    <p>
+                        Implemented monitoring rules for Active Users,
+                        Sessions, New Users, and Engagement Rate.
+                        The system identifies declines and generates
+                        alerts based on the comparison results.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <h3>Automated Email Notifications</h3>
+
+                    <p>
+                        Successfully integrated the Gmail API to deliver
+                        email notifications when traffic declines occur.
+                        The end-to-end workflow was tested successfully,
+                        including automated execution and email delivery.
+                    </p>
+
+                </div>
+
+                <div class="insight-card">
+
+                    <h3>Scheduled Local Automation</h3>
+
+                    <p>
+                        Configured macOS launchd to run the monitoring
+                        workflow daily at 8:00 PM without requiring
+                        VS Code or manual script execution.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- Monitoring Results -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Monitoring Results & Email Alerts</h2>
+
+                <div class="screenshot-grid ga4-monitor-grid">
+
+                    <!-- Monitoring Report -->
+                    <div class="screenshot-card ga4-monitor-card">
+
+                        <img src="images/ga4-monitor-performance-report.jpg" class="ga4-monitor-image"
+                            alt="GA4 website traffic performance comparison report" loading="lazy" decoding="async">
+
+                        <div class="screenshot-caption">
+                            <h3>Performance Comparison</h3>
+                            <p>
+                                Monitoring report comparing current and previous
+                                seven-day periods across key website metrics.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Gmail Alert -->
+                    <div class="screenshot-card ga4-monitor-card">
+
+                        <img src="images/ga4-monitor-email-alert.jpg" class="ga4-monitor-image"
+                            alt="Automated GA4 website traffic decline email notification" loading="lazy"
+                            decoding="async">
+
+                        <div class="screenshot-caption">
+                            <h3>Automated Email Alert</h3>
+                            <p>
+                                Email notification automatically generated when
+                                the monitoring system detects a traffic decline.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- What I Learned -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>What I Learned</h2>
+
+                <p>
+                    This project helped me move beyond retrieving and
+                    analyzing marketing data toward building an
+                    automated monitoring system.
+                </p>
+
+                <p>
+                    I gained practical experience integrating multiple
+                    Google APIs, managing OAuth authentication,
+                    processing time-based performance data with Pandas,
+                    and implementing conditional monitoring rules.
+                </p>
+
+                <p>
+                    I also learned how to schedule Python workflows
+                    using macOS launchd, allowing a local application
+                    to execute automatically without keeping
+                    a development environment open.
+                </p>
+
+                <p>
+                    Most importantly, the project demonstrated how
+                    marketing analytics can be turned into an
+                    automated process that identifies performance
+                    changes and delivers actionable notifications.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Data & Privacy -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Data & Privacy</h2>
+
+                <p>
+                    The project uses OAuth 2.0 authentication to access
+                    Google Analytics 4 data and send email notifications
+                    through the Gmail API.
+                </p>
+
+                <p>
+                    The public implementation is designed to keep
+                    authentication credentials, authorization tokens,
+                    and private website performance data separate
+                    from the source code.
+                </p>
+
+                <p>
+                    The monitoring workflow runs locally on macOS.
+                    The public repository provides the implementation
+                    and documentation without requiring access
+                    to the original website's analytics account.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Final CTA -->
+        <section class="case-study-cta">
+            <div class="container">
+
+                <h2>Explore the Project</h2>
+
+                <p>
+                    The Python monitoring workflow, project structure,
+                    and implementation details are available on GitHub.
+                </p>
+
+                <div class="case-study-buttons">
+
+                    <a href="https://github.com/byrdie-beta/ga4-website-traffic-monitor" class="btn-case"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="View the GA4 Website Traffic Monitor project on GitHub">
+                        View on GitHub
+                    </a>
+
+                </div>
+
+                <a href="projects" class="back-link">
+                    ← Back to Projects
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>
+            Marketing by profession, climbing by obsession.
+        </p>
+        <p>
+            © 2026 ByrdieOnTheRocks | Lab. All rights reserved.
+        </p>
+
+        <p class="footer-note">
+            Unless otherwise stated, projects on this site use publicly available,
+            first-party, sample, or synthetic datasets and are shared for educational
+            and portfolio purposes.
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

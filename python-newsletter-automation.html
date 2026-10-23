@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Meta Tags -->
+    <title>Python Newsletter Automation | ByrdieOnTheRocks Lab</title>
+    <meta name="description"
+        content="A Python newsletter automation project using Google Sheets API, Gmail API, personalized HTML emails, and Google Analytics 4 campaign tracking.">
+    <meta name="author" content="Ekkaphot">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="theme-color" content="#11324D">
+    <meta name="color-scheme" content="light">
+    <link rel="canonical" href="https://lab.byrdieontherocks.com/python-newsletter-automation">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ByrdieOnTheRocks Lab">
+    <meta property="og:title" content="Python Newsletter Automation | ByrdieOnTheRocks Lab">
+    <meta property="og:description"
+        content="Automating personalized HTML newsletters using Python, Google Sheets, Gmail API, and UTM campaign tracking.">
+    <meta property="og:url" content="https://lab.byrdieontherocks.com/python-newsletter-automation">
+    <meta property="og:image" content="https://live.staticflickr.com/65535/55592837330_aceaf8c15a_b.jpg">
+    <meta property="og:image:alt" content="ByrdieOnTheRocks newsletter project">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Python Newsletter Automation",
+        "description": "A Python email marketing automation project integrating Google Sheets, Gmail API, personalized HTML, and GA4 campaign tracking.",
+        "url": "https://lab.byrdieontherocks.com/python-newsletter-automation",
+        "author": {
+            "@type": "Person",
+            "name": "Ekkaphot"
+        }
+    }
+    </script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Cookiebot -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="79c76370-762c-47c8-bdd4-b3051e5a86fb"
+        data-blockingmode="auto" type="text/javascript">
+        </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        const isLocal =
+            location.hostname === 'localhost' ||
+            location.hostname === '127.0.0.1';
+
+        if (!isLocal) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-X47QE9KNNJ';
+            document.head.appendChild(script);
+
+            script.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                window.gtag = gtag;
+
+                gtag('js', new Date());
+                gtag('config', 'G-X47QE9KNNJ');
+            };
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center" href="index">
+                <img src="images/byrdieontherockslablogo.png" alt="Byrdie On The Rocks Lab" class="navbar-logo">
+
+                <span class="lab-text">| LAB</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab-notes">Lab Notes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-me">Contact Me</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- PROJECT BANNER -->
+    <section class="project-banner">
+
+        <div class="project-banner-overlay"></div>
+
+        <div class="container project-banner-content">
+
+            <p class="case-study-label">
+                Marketing Analytics & Automation
+            </p>
+
+            <h1>Python Newsletter Automation</h1>
+
+            <p>
+                Automating personalized HTML newsletters using Python,
+                Google Sheets, and Gmail API, with website campaign
+                tracking through Google Analytics 4.
+            </p>
+
+        </div>
+    </section>
+
+
+    <main class="newsletter-case-study">
+
+        <!-- PROJECT HEADER -->
+        <header class="case-study-header">
+            <div class="container">
+
+                <a href="projects" class="back-link">
+                    ← Back to Projects
+                </a>
+
+                <p class="case-study-label">
+                    Marketing Analytics & Automation
+                </p>
+
+                <h2>Python Newsletter Automation</h2>
+
+                <p class="case-study-intro">
+                    Personalized Email Marketing Automation Using Python
+                </p>
+
+                <div class="tool-list">
+                    <span>Python</span>
+                    <span>Google Sheets API</span>
+                    <span>Gmail API</span>
+                    <span>HTML</span>
+                    <span>OAuth 2.0</span>
+                    <span>UTM Tracking</span>
+                    <span>GA4</span>
+                </div>
+
+                <div class="case-study-buttons">
+                    <a href="https://github.com/byrdie-beta" class="btn-case" target="_blank" rel="noopener noreferrer"
+                        aria-label="View ByrdieOnTheRocks projects on GitHub">
+                        View on GitHub
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+
+        <!-- OVERVIEW -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Project Overview</h2>
+
+                <p>
+                    This project explores how Python can automate
+                    a newsletter campaign, from retrieving client
+                    information to sending personalized HTML emails
+                    through the Gmail API.
+                </p>
+
+                <p>
+                    I built a simulated website launch campaign for
+                    ByrdieOnTheRocks, using Google Sheets as the contact
+                    database and Python to manage recipient eligibility,
+                    personalization, sending, and status updates.
+                </p>
+
+                <p>
+                    Newsletter links contain dynamic UTM parameters,
+                    allowing campaign traffic to be tracked in GA4.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- OBJECTIVES -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>What I Wanted to Build</h2>
+
+                <ul>
+                    <li>
+                        Retrieve client information automatically
+                        using Google Sheets API.
+                    </li>
+
+                    <li>
+                        Create a reusable, personalized HTML newsletter.
+                    </li>
+
+                    <li>
+                        Apply recipient eligibility rules before sending.
+                    </li>
+
+                    <li>
+                        Send personalized emails through Gmail API.
+                    </li>
+
+                    <li>
+                        Automatically update sending statuses in Google Sheets.
+                    </li>
+
+                    <li>
+                        Track newsletter campaign traffic using GA4.
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- WORKFLOW -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Workflow</h2>
+
+                <p>
+                    The project connects Google Sheets, Python,
+                    and Gmail API into one newsletter automation workflow.
+                </p>
+
+                <p>
+                    <strong>
+                        Google Sheets → Python → Eligibility Check →
+                        HTML Personalization → Gmail API → Status Update
+                    </strong>
+                </p>
+
+                <p>
+                    Python retrieves client records, checks eligibility,
+                    and generates personalized newsletters using
+                    information stored in Google Sheets.
+                </p>
+
+                <p>
+                    Gmail API sends the prepared message, and Python
+                    updates the corresponding status. Newsletter links
+                    direct recipients to the website, where UTM
+                    parameters support GA4 campaign tracking.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- WORKFLOW DIAGRAM -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <div class="screenshot-card ga4-workflow-card">
+
+                    <img src="images/newsletter-workflow.jpg" class="ga4-workflow-image"
+                        alt="Python newsletter automation workflow connecting Google Sheets, Python, Gmail API, and GA4"
+                        loading="lazy" decoding="async">
+
+                    <div class="screenshot-caption">
+                        <p>
+                            Newsletter automation workflow from contact
+                            retrieval to personalized email delivery
+                            and campaign tracking.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- APPROACH -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>Approach</h2>
+
+                <ol>
+                    <li>
+                        Connected Python to Google Sheets API using OAuth 2.0.
+                    </li>
+
+                    <li>
+                        Retrieved client names, email addresses,
+                        sending preferences, statuses, and UTM parameters.
+                    </li>
+
+                    <li>
+                        Created a branded HTML newsletter template
+                        with dynamic placeholders.
+                    </li>
+
+                    <li>
+                        Applied eligibility rules to identify recipients
+                        marked Y and Pending.
+                    </li>
+
+                    <li>
+                        Personalized email content and subject lines
+                        using client information.
+                    </li>
+
+                    <li>
+                        Integrated Gmail API to send HTML newsletters.
+                    </li>
+
+                    <li>
+                        Updated email statuses in Google Sheets
+                        after sending requests.
+                    </li>
+
+                    <li>
+                        Verified UTM campaign traffic using GA4.
+                    </li>
+                </ol>
+
+            </div>
+        </section>
+
+
+        <!-- DATA AND PYTHON -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Google Sheets & Python Integration</h2>
+
+                <p>
+                    Google Sheets stores recipient information,
+                    sending preferences, and campaign parameters.
+                    Python retrieves this information and processes
+                    eligible contacts.
+                </p>
+
+                <div class="screenshot-grid ga4-monitor-grid">
+
+                    <!-- Google Sheets -->
+                    <div class="screenshot-card ga4-monitor-card">
+
+                        <img src="images/newsletter-google-sheets.jpeg" class="ga4-monitor-image"
+                            alt="Sample client contact database in Google Sheets" loading="lazy" decoding="async">
+
+                        <div class="screenshot-caption">
+                            <h3>Contact Database</h3>
+
+                            <p>
+                                Sample client information, sending
+                                preferences, statuses, and UTM parameters.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Python -->
+                    <div class="screenshot-card ga4-monitor-card">
+
+                        <img src="images/newsletter-python.jpg" class="ga4-monitor-image"
+                            alt="Python newsletter automation code" loading="lazy" decoding="async">
+
+                        <div class="screenshot-caption">
+                            <h3>Python Automation</h3>
+
+                            <p>
+                                Processing client data and preparing
+                                personalized HTML newsletters.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PERSONALIZATION -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>Dynamic Personalization</h2>
+
+                <p>
+                    Python replaces HTML placeholders with client names
+                    and UTM parameters retrieved from Google Sheets.
+                </p>
+
+                <p>
+                    The same HTML template generates personalized
+                    newsletters with dynamic greetings, subject lines,
+                    and tracked website links.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- NEWSLETTER SCREENSHOT -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Personalized HTML Newsletter</h2>
+
+                <p>
+                    The final newsletter includes ByrdieOnTheRocks
+                    branding, a personalized greeting, website launch
+                    content, and a tracked call-to-action.
+                </p>
+
+                <div class="screenshot-card newsletter-email-card">
+
+                    <img src="images/newsletter-email-preview.jpg" class="newsletter-email-image"
+                        alt="Personalized ByrdieOnTheRocks newsletter received through Gmail" loading="lazy"
+                        decoding="async">
+
+                    <div class="screenshot-caption">
+                        <p>
+                            Personalized HTML newsletter successfully
+                            received through Gmail during testing.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ELIGIBILITY -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>Email Eligibility & Status Tracking</h2>
+
+                <p>
+                    The automation processes recipients only when
+                    <strong>sendEmail = Y</strong> and
+                    <strong>status = Pending</strong>.
+                </p>
+
+                <p>
+                    After Gmail accepts a sending request, Python
+                    updates the status to Sent. Records already
+                    marked Sent are skipped on later runs.
+                </p>
+
+                <p>
+                    Sending errors follow a separate handling path.
+                    Additional duplicate-prevention safeguards
+                    are planned for future development.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- KEY RESULTS -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Key Results</h2>
+
+                <div class="insight-card">
+                    <h3>Google Sheets Integration</h3>
+
+                    <p>
+                        Automated client retrieval and status updates.
+                    </p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>Email Personalization</h3>
+
+                    <p>
+                        Dynamic greetings, subjects, and UTM links.
+                    </p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>Gmail API Automation</h3>
+
+                    <p>
+                        Successfully sent and received personalized newsletters.
+                    </p>
+                </div>
+
+                <div class="insight-card">
+                    <h3>GA4 Campaign Tracking</h3>
+
+                    <p>
+                        Verified newsletter campaign traffic in GA4.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LEARNINGS -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>What I Learned</h2>
+
+                <p>
+                    This project helped me apply Python to a practical
+                    marketing automation workflow beyond data analysis.
+                </p>
+
+                <p>
+                    I gained experience integrating Google APIs,
+                    working with OAuth authentication, Python functions,
+                    conditional logic, error handling, and dynamic HTML.
+                </p>
+
+                <p>
+                    I also learned how separate Python modules work
+                    together to retrieve data, prepare emails,
+                    send newsletters, and track campaign results.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- DATA AND PRIVACY -->
+        <section class="case-study-section">
+            <div class="container case-study-content">
+
+                <h2>Data & Privacy</h2>
+
+                <p>
+                    The project uses Google OAuth 2.0 authentication
+                    to access Google Sheets and Gmail API.
+                </p>
+
+                <p>
+                    Testing used sample contact records and controlled
+                    email accounts. The public project version excludes
+                    private credentials, tokens, and client information.
+                </p>
+
+                <p>
+                    The workflow runs locally and was developed
+                    as a Python and marketing automation portfolio project.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FUTURE DEVELOPMENT -->
+        <section class="case-study-section section-light">
+            <div class="container case-study-content">
+
+                <h2>Future Development</h2>
+
+                <p>
+                    Version 2 will explore scheduled newsletter sending,
+                    recurring campaigns, and stronger duplicate prevention
+                    using local macOS automation.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- FINAL CTA -->
+        <section class="case-study-cta">
+            <div class="container">
+
+                <h2>Explore the Project</h2>
+
+                <p>
+                    Explore my Python marketing automation
+                    projects and implementation on GitHub.
+                </p>
+
+                <div class="case-study-buttons">
+                    <a href="https://github.com/byrdie-beta" class="btn-case" target="_blank" rel="noopener noreferrer"
+                        aria-label="View ByrdieOnTheRocks projects on GitHub">
+                        View on GitHub
+                    </a>
+                </div>
+
+                <a href="projects" class="back-link">
+                    ← Back to Projects
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            Marketing by profession, climbing by obsession.
+        </p>
+
+        <p>
+            © 2026 ByrdieOnTheRocks | Lab. All rights reserved.
+        </p>
+
+        <p class="footer-note">
+            Unless otherwise stated, projects on this site use publicly available,
+            first-party, sample, or synthetic datasets and are shared for educational
+            and portfolio purposes.
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -580,3 +580,77 @@ Marketing Campaign Section
         height: 240px;
     }
 }
+
+/* ==========================
+   Python Newsletter Automation
+========================== */
+
+
+/* 1. Subheadings
+========================== */
+
+.newsletter-case-study .case-study-content h3 {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+
+/* 2. Newsletter Email Preview
+========================== */
+
+.newsletter-email-card {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Email screenshot */
+.newsletter-email-card .newsletter-email-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Email screenshot caption */
+.newsletter-email-card .screenshot-caption {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.newsletter-email-card .screenshot-caption p {
+    margin: 0;
+}
+
+
+/* 3. Contact Database & Python Automation
+========================== */
+
+/* Center screenshot captions */
+.newsletter-screenshot-grid .screenshot-caption {
+    text-align: center;
+}
+
+.newsletter-screenshot-grid .screenshot-caption h3,
+.newsletter-screenshot-grid .screenshot-caption p {
+    text-align: center;
+}
+
+
+/* 4. Mobile Responsive
+========================== */
+
+@media (max-width: 767px) {
+    .newsletter-case-study .case-study-content h3 {
+        font-size: 1rem;
+    }
+}

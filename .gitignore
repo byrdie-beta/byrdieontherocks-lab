@@ -11,3 +11,6 @@ token.json
 client_secret*.json
 *service-account*.json
 *.pem
+credentials.json
+client_secrets.json
+token*.json

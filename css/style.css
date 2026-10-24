@@ -586,8 +586,7 @@ Marketing Campaign Section
 ========================== */
 
 
-/* 1. Subheadings
-========================== */
+/* 1. Subheadings*/
 
 .newsletter-case-study .case-study-content h3 {
     font-size: 1.05rem;
@@ -596,8 +595,7 @@ Marketing Campaign Section
 }
 
 
-/* 2. Newsletter Email Preview
-========================== */
+/* 2. Newsletter Email Preview */
 
 .newsletter-email-card {
     max-width: 550px;
@@ -632,8 +630,7 @@ Marketing Campaign Section
 }
 
 
-/* 3. Contact Database & Python Automation
-========================== */
+/* 3. Contact Database & Python Automation*/
 
 /* Center screenshot captions */
 .newsletter-screenshot-grid .screenshot-caption {
@@ -646,8 +643,7 @@ Marketing Campaign Section
 }
 
 
-/* 4. Mobile Responsive
-========================== */
+/* 4. Mobile Responsive */
 
 @media (max-width: 767px) {
     .newsletter-case-study .case-study-content h3 {
